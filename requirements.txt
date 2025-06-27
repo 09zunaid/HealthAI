@@ -1,0 +1,5 @@
+# requirements.txt
+streamlit
+ibm-watsonx-ai
+pandas
+matplotlib
