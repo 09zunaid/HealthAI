@@ -7,7 +7,7 @@ def chat_with_healthai(question):
     project_id = "71168a4b-b1c7-4bf9-b1c1-9eae5e7ba0f9"
     url = "https://us-south.ml.cloud.ibm.com"
 
-    model_id = "ibm/granite-13b-instruct-v2"  # Ensure it's available in your region
+    model_id = "ibm/granite-3-2b-instruct"  # Ensure it's available in your region
 
     # Step 1: Get IAM Token
     iam_url = "https://iam.cloud.ibm.com/identity/token"
@@ -43,3 +43,4 @@ def chat_with_healthai(question):
         return f"❌ Error generating response: {gen_response.text}"
 
     return gen_response.json().get("results", [{}])[0].get("generated_text", "No response received.")
+
